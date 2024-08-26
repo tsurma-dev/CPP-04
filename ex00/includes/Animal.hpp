@@ -6,7 +6,7 @@
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 16:30:56 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/19 17:04:46 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/26 13:30:56 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,18 @@
 
 class Animal {
 protected:
-	std::string type;
+	std::string _type;
 public:
+// Orthodox Canonical Form
 	Animal();
-	~Animal();
+	virtual ~Animal();
 	Animal(const Animal& other);
 	Animal& operator=(const Animal& other);
 
-	std::string getType(void);
+// Member functions
+	// ~Make Class abstract~
+	virtual void makeSound() const;
+	std::string getType(void) const;
 	void setType(std::string type);
 };
 

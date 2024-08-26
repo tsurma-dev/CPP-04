@@ -6,7 +6,7 @@
 #    By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/19 16:28:26 by tsurma            #+#    #+#              #
-#    Updated: 2024/08/19 16:30:46 by tsurma           ###   ########.fr        #
+#    Updated: 2024/08/26 13:16:34 by tsurma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,11 @@ NAME = animal.out
 MAKEFLAGS = --no-print-directory
 
 SRC =	srcs/main.cpp\
-		srcs/animal.cpp\
-		srcs/cat.cpp\
-		srcs/dog.cpp\
-		srcs/wrongAnimal.cpp\
-		srcs/wrongCat.cpp
+		srcs/Animal.cpp\
+		srcs/Cat.cpp\
+		srcs/Dog.cpp\
+		srcs/WrongAnimal.cpp\
+		srcs/WrongCat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

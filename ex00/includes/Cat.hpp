@@ -6,7 +6,7 @@
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 16:32:30 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/19 17:04:32 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/26 13:15:23 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define CAT_HPP_
 
 #include "Animal.hpp"
-#include "iostream"
 
 class Cat : public Animal {
 private:
@@ -22,17 +21,8 @@ public:
 	Cat();
 	~Cat();
 	Cat(const Cat& other);
-	Cat& Cat(const Cat& other);
-
+	Cat& operator=(const Cat& other);
+	void makeSound() const;
 };
-
-Cat::Cat() : type("Cat")
-{
-}
-
-Cat::~Cat()
-{
-}
-
 
 #endif
