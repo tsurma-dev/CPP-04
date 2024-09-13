@@ -6,7 +6,7 @@
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:11:14 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/26 16:11:28 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/09/13 11:46:47 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Dog::~Dog() {
 	delete (this->_Brain);
 }
 
-Dog::Dog(const Dog& other) {
+Dog::Dog(const Dog& other) : _Brain(new Brain) {
 	std::cout << "Dog:\tCopy constructor called" << std::endl;
 	*this = other;
 }
@@ -36,4 +36,8 @@ Dog& Dog::operator=(const Dog& other) {
 
 void Dog::makeSound() const {
 	std::cout << "WOOF" << std::endl;
+}
+
+Brain& Dog::exposeBrain(void) {
+	return *(this->_Brain);
 }

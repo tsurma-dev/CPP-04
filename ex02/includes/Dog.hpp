@@ -6,7 +6,7 @@
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 16:32:44 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/26 16:07:43 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/09/13 11:46:58 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ public:
 	Dog& operator=(const Dog& other);
 
 	void makeSound() const;
+	Brain& exposeBrain(void);
 };
 
 #endif
